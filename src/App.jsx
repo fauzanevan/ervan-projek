@@ -1319,11 +1319,27 @@ export default function App() {
             {/* BRANDING LOGO & SALES INFO */}
             <div className="flex flex-col items-center mb-6">
               <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="bg-white p-1.5 md:p-2 rounded-xl shadow-lg transform transition hover:scale-105">
-                  <img src="logo honda one heart.jpg" alt="Honda One Heart" className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg" />
-                </div>
+                {/* Logo utama Selamat Motor menggunakan URL HTTPS publik, bukan file lokal */}
                 <div className="bg-white p-1.5 md:p-2 rounded-xl shadow-lg border-2 border-red-200 transform transition hover:scale-105">
-                  <img src="LOGO SLM.PNG" alt="Selamat Motor" className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg" />
+                  <img
+                    src="https://selamatmotor.com/wp-content/uploads/2024/03/LOGO-SELAMAT-MOTOR-SMI-HD-putih-2048x1679.webp"
+                    alt="Logo Selamat Motor"
+                    loading="eager"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg"
+                  />
+                </div>
+                {/* Logo Honda menggunakan URL HTTPS publik */}
+                <div className="bg-white p-1.5 md:p-2 rounded-xl shadow-lg transform transition hover:scale-105">
+                  <img
+                    src="https://selamatmotor.com/wp-content/uploads/2024/03/honda-1024x1024.webp"
+                    alt="Logo Honda"
+                    loading="eager"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg"
+                  />
                 </div>
               </div>
 
