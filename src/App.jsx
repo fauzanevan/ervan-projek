@@ -1320,25 +1320,29 @@ export default function App() {
             <div className="flex flex-col items-center mb-6">
               <div className="flex items-center justify-center gap-4 mb-4">
                 {/* Logo utama Selamat Motor menggunakan URL HTTPS publik, bukan file lokal */}
-                <div className="bg-white p-1.5 md:p-2 rounded-xl shadow-lg border-2 border-red-200 transform transition hover:scale-105">
+                <div className="relative flex items-center justify-center bg-[#222222] p-1.5 md:p-2 rounded-xl shadow-lg border-2 border-red-200 transform transition hover:scale-105 w-16 h-16 md:w-20 md:h-20 overflow-hidden">
+                  <span className="absolute inset-0 flex items-center justify-center text-white text-[10px] md:text-xs font-extrabold text-center leading-tight px-1">SELAMAT<br />MOTOR</span>
                   <img
                     src="https://selamatmotor.com/wp-content/uploads/2024/03/LOGO-SELAMAT-MOTOR-SMI-HD-putih-2048x1679.webp"
                     alt="Logo Selamat Motor"
                     loading="eager"
                     decoding="async"
                     referrerPolicy="no-referrer"
-                    className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    className="relative z-10 w-full h-full object-contain rounded-lg"
                   />
                 </div>
-                {/* Logo Honda menggunakan URL HTTPS publik */}
-                <div className="bg-white p-1.5 md:p-2 rounded-xl shadow-lg transform transition hover:scale-105">
+                {/* Logo Honda: latar putih agar logo berwarna tetap jelas */}
+                <div className="relative flex items-center justify-center bg-white p-1.5 md:p-2 rounded-xl shadow-lg border border-white/70 transform transition hover:scale-105 w-16 h-16 md:w-20 md:h-20 overflow-hidden">
+                  <span className="absolute inset-0 flex items-center justify-center text-red-600 text-sm md:text-base font-black italic">HONDA</span>
                   <img
                     src="https://selamatmotor.com/wp-content/uploads/2024/03/honda-1024x1024.webp"
                     alt="Logo Honda"
                     loading="eager"
                     decoding="async"
                     referrerPolicy="no-referrer"
-                    className="w-12 h-12 md:w-16 md:h-16 object-contain rounded-lg"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    className="relative z-10 w-full h-full object-contain rounded-lg"
                   />
                 </div>
               </div>
